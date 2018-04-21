@@ -5,4 +5,177 @@
 @import "components/footer";
 
 
+body {
+    max-width: 1920px;
+    margin:0 auto;
+}
 
+ label[for="toggle"] {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    color:$black;
+    z-index:6;
+    font-size:3rem;
+        &:hover {
+            color:$gold;
+        }
+    }
+
+
+.wrapper {
+    max-width: 1170px;
+    margin:0 auto;
+}
+
+img {
+    max-width:100%;
+}
+
+// HEADER BEGINS
+
+header {
+    max-height:100vh;
+    max-width:100%;
+    
+
+// main-nav begins
+    .top-header {
+        max-width:100%;
+        max-height:10vh;
+        display:flex;
+        flex-flow:row nowrap;
+        justify-content:space-around;
+        left: 0;
+        position:relative;
+
+        .logo {
+            width:250px;
+            padding-top:50px;
+        }
+        
+        .main-navigation ul {
+            list-style:none;
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content: space-between;
+            width: 635px;
+            margin-top: 65px;
+        }
+        
+        .main-navigation__list-item {
+                padding-left:20px;
+                position:relative;
+        
+            &:hover .main-navigation__sub-menu ul{
+                        display: flex;
+                        flex-flow: column nowrap;
+
+                .sub-menu__link:hover {
+                    color:$black;
+                }
+            }
+        }
+    
+        .main-navigation__sub-menu ul {
+            padding:0;
+            margin:0;
+            width:500px;
+            position:absolute;
+            display:none;
+
+            li {
+                padding-top:10px;
+            }
+        }
+
+        .language, .session-menu {
+            margin-top:65px;
+        }
+    }
+    // main nav ends
+
+        // head content begins
+    .header-content {
+        width:100%;
+
+        .header--left {
+            float: left;
+            max-width: 40%;
+        }
+        .header--right{
+            float: right;
+            max-width: 60%;
+        }
+    }
+    // header content ends
+}
+// HEADER ENDS
+
+    // responsive nav begins
+   .navigation--responsive {
+       display: none;
+   }
+   
+    #toggle {
+        display: none;
+    }
+
+    svg.hamburger {
+        display: none;
+    }
+
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 768px) {
+        .main-navigation {
+            display: none;
+        }
+
+        svg.hamburger {
+            display:block;
+        }
+
+        .navigation--responsive {
+        display: block;
+        background: linear-gradient(to top, $grey, lighten($grey, 40));
+        width: 200px;
+        height:100vh;
+        position:fixed;
+        top:-100vh;
+        right: 0;
+        left:0;
+        bottom:0;
+        margin: 0;
+        padding:0;
+        transition: top 1s ease;
+
+            ul {
+            list-style: none;
+            height:70vh;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin: 90px 0 0 0;
+            padding:0;
+                
+                li {
+                margin: 0;
+                padding:0;
+
+                    a{
+                    padding:50px 20px 50px 30px;
+                    }
+                }
+            }
+        }
+
+        #toggle:checked ~ .navigation--responsive {
+            top: 0vh;
+        } 
+    }
+
+// SECTION 1 BEGINS
+    .section-1 {
+            clear:both;
+        }

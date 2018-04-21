@@ -1,0 +1,139 @@
+
+
+// colors
+$h1color: rgba(179,170,170,0.22);
+$black: #333333;
+$grey: #888888; 
+$white: #ffffff;
+$gold: #d4bd52;
+
+a {
+    text-decoration:none;
+}
+
+// header styles
+h1, h2, h3, h4, h5, h6 {
+    padding:0;
+    margin:0;
+    font-family:"Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    font-weight:400;
+}
+
+h1 {
+    color:$h1color;
+    font-size:31.25rem;
+}
+
+h2 {
+    color:$black;
+    font-size:5rem;
+    font-weight:700;
+}
+
+h3 {
+    color:$grey;
+    font-size:3.75rem;
+    font-weight:700;
+    transform:rotate(90);
+}
+
+h4 {
+    color:$black;
+    font-size:1.88rem;
+    font-weight:400;
+}
+
+h5 {
+    color:$black;
+    font-size: 1.775rem;
+    font-weight:700rem;
+}
+
+// paragraph styles
+
+p {
+    font-family: "roboto", sans-serif;
+    text-align:left;
+    font-weight:400;
+}
+
+header {
+    .paragraph {
+        font-size:1.75rem;
+        color:$grey;
+    }
+}
+
+.paragraph--subtitle {
+    color:$grey;
+    font-size:1.13rem;
+}
+
+.navigation--responsive li {
+    a {
+    color: $black;
+    font-size:2rem;
+    text-decoration: none;
+    
+
+        &:hover {
+            color:$gold;
+        }
+    }
+}
+
+// h4>p, .prevNext
+// color:#888888; $grey
+// font-size: 1.13rem;/* Approximation due to font substitution */
+
+// `promotions 
+// $black #333333
+// font-size: 1rem;
+// line-height: 2.5;
+// transform: rotate(-90deg);
+
+// 'top products>figcpation>p, 'onsale-products>figcaption>p, footer>p/a 
+//  #555555 #ffffff $white;
+// font-size: 1rem;
+// line-height: 1.5;
+
+// `footer>feet.tags>a
+// color: #ffffff; $white
+// font-size: 0.88rem;
+// line-height: 2
+
+// look-book 
+// color:#444444; grey;
+// font-size: 0.94rem
+// line-height: 2;
+// transform: rotate(-90deg)
+
+// `top-products p(price,), look-book p(price)
+// font-family: Montserrat;
+// color:#333333;
+// font-size: 1.125rem;/* Approximation due to font substitution */
+// line-height: 1.667;/* Approximation due to font substitution */
+
+// /* Inline Style */
+// color:#aaaaaa;
+// font-size: 0.938rem;
+// line-height: 2;
+
+// link styles
+
+.main-navigation__list-item__link, .sub-menu__link, .language {
+    color:grey;
+}
+
+.main-navigation__list-item__link i{
+    font-size:12px;
+}
+
+.session-menu__link {
+    color:black;
+}

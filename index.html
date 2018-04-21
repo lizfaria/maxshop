@@ -6,85 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Maxshop.</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto" rel="stylesheet">
+    <script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
 </head>
-<body class="main-page">
+<body class="main-page" id="home">
+    <label for="toggle">
+        <i class="fas fa-bars hamburger"></i></label>
 
     <!-- HEADER BEGINS -->
-    <header id="home">
-        <!-- fixed header begins -->
-        <div class="fixed-header">
-            <div class="fixed-header__image--logo">
+    <header class="clearfix">
+        <!-- top-header begins -->
+        <div class="top-header">
+            <div class="logo">
                 <img src="images/logo.png" alt="maxshop logo">
-                <nav class="fixed-header__main-navigation">
-                    <ul class="fixed-header__main-navigation__ul">
-                        <li class="fixed-header__main-navigation__ul__link">
-                            <a href="#home">Home</a>
-                        </li>
-                        <li class="fixed-header__main-navigation__ul__link">
-                            <a href="#promotions">Shop</a>
-                                <div class="fixed-header__sub-menu">
-                                    <ul>
-                                        <li>
-                                            <a href="#top-products">Top Products</a>
-                                        </li>
-                                        <li>
-                                            <a href="#onsale-products">Onsale Products</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </li>
-                        <li class="fixed-header__main-navigation__ul__link">
-                            <a href="#look-book">Lookbook</a>
-                        </li>
-                        <li class="fixed-header__main-navigation__ul__link">
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="fixed-header__main-navigation__ul__link">
-                            <a href="#blog">Blog</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="fixed-header__language">
-                    <select>GM</select>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li class="main-navigation__list-item">
+                        <a href="#home" class="main-navigation__list-item__link">Home</a>
+                    </li>
+                    <li class="main-navigation__list-item">
+                        <a href="#promotions" class="main-navigation__list-item__link">Shop <i class="fas fa-chevron-down"></i></a>
+                            <div class="main-navigation__sub-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#top-products" class="sub-menu__link">Top Products</a>
+                                    </li>
+                                    <li>
+                                        <a href="#onsale-products" class="sub-menu__link">Onsale Products</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </li>
+                    <li class="main-navigation__list-item">
+                        <a href="#look-book" class="main-navigation__list-item__link">Lookbook</a>
+                    </li>
+                    <li class="main-navigation__list-item">
+                        <a href="#contact" class="main-navigation__list-item__link">Contact</a>
+                    </li>
+                    <li class="main-navigation__list-item">
+                        <a href="#blog" class="main-navigation__list-item__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="language">
+                <select>GM</select>
+            </div>
+
+            <div class="session-menu">
+                <a href="#" class="session-menu__link">
+                    <i class="fas fa-search" aria-hidden"true"></i>
+                </a>
+                <a href="#" class="session-menu__link">
+                    <i class="far fa-user" aria-hidden"true"></i>
+                </a>
+                <a href="#" class="session-menu__link">
+                    <i class="fas fa-shopping-bag" aria-hidden"true"></i>
+                </a>
+            </div>
+
+        </div>
+        <!-- top-header ends -->
+        <!-- responsive nav begins -->
+        <input type="checkbox" id="toggle" name="toggle">
+        <nav class="navigation--responsive">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#promotions">Shop</a>
+                </li>
+                <li>
+                    <a href="#look-book">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                <li>
+                    <a href="#blog">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- responsive nav ends-->
+
+        <!-- header content begins -->
+        <div class="header-content">
+            <div class="header--left">
+                <h4 class="header-4--primary">26/02/2016</h4>
+                <p class="paragraph">Bring glamour to your wardrobe</p>
+                <h2 class="header-2--primary">Summer Collection 2016</h2>
+                <h1 class="header-1--primary">01</h1>
+                <div class="link">View More</div>
+                <img src="header-bars.png" aria-hidden"true" class="header--left__image">
+            </div>
+    
+            <div class="header--right">
+                <div class="image">
+                    <img src="images/main-image-1.png" alt="Seven white dresses hung up on rack">
                 </div>
-                <div class="fixed-header__notifications">
-                    <a href="#">
-                        <i class="fas fa-search" aria-hidden"true"></i>
+                <div class="header--right__chevron-container chevron-container">
+                    <a href="#" class="left-chevron">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
                     </a>
-                    <a href="#">
-                        <i class="far fa-user" aria-hidden"true"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-shopping-bag" aria-hidden"true"></i>
+    
+                    <a href="#" class="right-chevron">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
-        </div>
-        <!-- fixed header ends -->
-
-        <!-- header left and right divs begins -->
-        <div class="header--left">
-            <h4 class="header-4--primary">26/02/2016</h4>
-            <p class="header--left__paragraph">Bring glamour to your wardrobe</p>
-            <h2 class="header-2--primary">Summer Collection 2016</h2>
-            <h1 class="header-1--primary">01</h1>
-            <div class="header--left__link">View More</div>
-            <img src="header-bars.png" aria-hidden"true" class="header--left__image">
-        </div>
-
-        <div class="header--right">
-            <div class="header--right__image">
-            <div class="header--right__chevron-container chevron-container">
-                <a href="#" class="header--right__chevron-container__link--left-chevron left-chevron">
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-
-                <a href="#" class="header--right__chevron-container__link--right-chevron right-chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-            </div>
-        </div>
-        <!-- header right and left divs ends -->
+        </div><!-- header content ends -->
     </header>
     <!-- HEADER ENDS -->
 
@@ -127,8 +159,8 @@
         <h3>Spring/Summer</h3>
         <div class="wrapper">
 
-            <h4 class="header-4--primary">Top Products</h4>
-            <p class="section-2__paragraph">Come & Check our new Spring Summer Collection 2016</p>
+            <h4 class="header-4--secondary">Top Products</h4>
+            <p class="paragraph--subtitle">Come & Check our new Spring Summer Collection 2016</p>
             <div class="section-2__container">
                 <a href="#" class="link">Prev</a>
                 <p class="section-2__container__paragraph"> / </p>
@@ -248,7 +280,7 @@
 
         <div class="wrapper">
             <h4 class="header-4--primary">Onsale Products</h4>
-            <p class="section-4__paragraph">Come & Check our new Spring Summer Collection 2016</p>
+            <p class="paragraph--subtitle">Come & Check our new Spring Summer Collection 2016</p>
             <div class="section-4__container">
                 <a href="#" class="link">Prev</a>
                 <p class="section-4__container__paragraph"> / </p>
@@ -310,7 +342,7 @@
                     </figure>
                 </a>
             </div>
-            
+
             <div class="section-4__figure-container section-4__figure-container-4">
                 <a href="#" class="section-4__figure-container__figure__link">
                     <figure class="section-4__figure-container__figure">
@@ -344,7 +376,7 @@
                     <p class="section-5__text-container__paragraph--uppercase-light">lookbook</p>
                     <h4 class="header-4">Excerpt: A Sense of Belonging</h4>
                     <p class="section-5__text-container__paragraph--capitalize-light paragraph">4 October 2016/ 368 Comments</p>
-                    <p class="section-5__text-container__paragraph---normal paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis minus repellendus dignissimos.</p>
+                    <p class="section-5__text-container__paragraph> paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis minus repellendus dignissimos.</p>
                 </div>
 
                 <div class="section-5__image-container top"></div>
@@ -354,7 +386,7 @@
             <div class="secition-5__bottomContainer">
                 <div class="section-5__text-container bottom">
                     <p class="section-5__text-container__paragraph--uppercase-light">campaign</p>
-                    <h4 class="header-4">EChester and Peck 2016</h4>
+                    <h4 class="header-4">Chester and Peck 2016</h4>
                     <p class="section-5__text-container__paragraph--capitalize-light paragraph">4 October 2016/ 368 Comments</p>
                     <p class="section-5__text-container__paragraph---normal paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis minus repellendus dignissimos.</p>
                 </div>
@@ -382,14 +414,14 @@
 
         <div class="section-6__container left">
             <h4 class="header-4--secondary">Rethink Your Design</h4>
-            <p class="section__paragraph">Minimal and Modern Look</p>
-            <a href="#" class="section-6__link">Discover More</a>
+            <p class="paragraph--subtitle">Minimal and Modern Look</p>
+            <a href="#" class="link">Discover More</a>
         </div>
 
         <div class="section-6__container right">
             <h4 class="header-4--secondary">Rethink Your Design</h4>
-            <p class="section__paragraph">Minimal and Modern Look</p>
-            <a href="#" class="section-6__link">Discover More</a>
+            <p class="paragraph--subtitle">Minimal and Modern Look</p>
+            <a href="#" class="link">Discover More</a>
         </div>
 
     </section>
