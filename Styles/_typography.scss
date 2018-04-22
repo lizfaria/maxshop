@@ -36,22 +36,24 @@ h2 {
 }
 
 h3 {
-    color:$grey;
+    color:lighten($grey, 30);
     font-size:3.75rem;
+    height:700px;
     font-weight:700;
-    transform:rotate(90);
+    transform:rotate(90deg);
 }
 
 h4 {
     color:$black;
     font-size:1.88rem;
-    font-weight:400;
+    font-weight:700;
 }
 
 h5 {
     color:$black;
     font-size: 1.775rem;
     font-weight:700rem;
+    background: $white;
 }
 
 // paragraph styles
@@ -87,42 +89,90 @@ header {
     }
 }
 
-// h4>p, .prevNext
-// color:#888888; $grey
-// font-size: 1.13rem;/* Approximation due to font substitution */
+.link-container {
+    
+    a, p {
+    color: $grey;
+    font-size: 1.15rem;
+    display: inline-block;
+    }
 
-// `promotions 
-// $black #333333
-// font-size: 1rem;
-// line-height: 2.5;
-// transform: rotate(-90deg);
+    a:hover {
+    color: $black;
+    }
+    
+}
+
+.link-container--prev-next {
+    a, p {
+    color: $grey;
+    font-size: 1.15rem;
+    display: inline-block;
+    }
+
+    p {
+        padding:5px;
+    }
+
+    a:hover {
+    color: $black;
+    }
+}
+
+.section-1 .paragraph {
+    transform: rotate(-90deg);
+    color: $black;
+}
+
+.section-1 .paragraph, footer .paragraph, footer .link {
+    font-size: 1rem;
+    line-height: 2.5;
+}
+footer .paragraph, footer .link {
+    color: $white;
+}
+
+footer .tags .link {
+    font-size: 0.88rem;
+    line-height: 2
+
+}
+
+.paragraph--bold-number { 
+    font-family: "Montserrat", sans-serif;
+    color:#333333;
+    font-size: 1.125rem;
+    line-height: 1.667;
+}
+.paragraph--light-crossed {
+    font-family: "Montserrat", sans-serif;
+    color:#aaaaaa;
+    font-size: 0.938rem;
+    line-height: 2;
+}
+
+.section-2, .section-4  {
+    .image--bag {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+    }
+}
+
+.section-3 .paragraph {
+    color:$grey;
+    font-size: 0.94rem;
+    line-height: 2;
+    transform: rotate(-90deg)
+}
+
 
 // 'top products>figcpation>p, 'onsale-products>figcaption>p, footer>p/a 
 //  #555555 #ffffff $white;
 // font-size: 1rem;
 // line-height: 1.5;
 
-// `footer>feet.tags>a
-// color: #ffffff; $white
-// font-size: 0.88rem;
-// line-height: 2
 
-// look-book 
-// color:#444444; grey;
-// font-size: 0.94rem
-// line-height: 2;
-// transform: rotate(-90deg)
-
-// `top-products p(price,), look-book p(price)
-// font-family: Montserrat;
-// color:#333333;
-// font-size: 1.125rem;/* Approximation due to font substitution */
-// line-height: 1.667;/* Approximation due to font substitution */
-
-// /* Inline Style */
-// color:#aaaaaa;
-// font-size: 0.938rem;
-// line-height: 2;
 
 // link styles
 
@@ -137,3 +187,72 @@ header {
 .session-menu__link {
     color:black;
 }
+
+// buttons
+
+.link-container {
+width:180px;
+height:60px;
+border-radius:50px;
+    .link{
+    font-family: "Montserrat", sans-serif;
+    font-weight:400;
+    font-size:1rem;
+    padding:20px 45px;
+    }
+}
+
+.link-container--prev-next{
+    width:106px;
+}
+
+.header-content .link-container {
+background-color:$gold;
+    .link {
+        color:white;
+
+        &:hover {
+            color:black;
+        }
+    }
+}
+
+.section-3 .link-container {
+    border: solid 1px $gold;
+    background-color: $white;
+
+    .link{
+    padding:20px 45px;
+    }
+}
+
+.section-6 {
+    .container--left .link--button {
+        border: solid 1px $white;
+        color:$white;
+    }
+    .container--right .link--button {
+        border:solid 1px $gold;
+        color:$black;
+    }
+}
+
+footer .section05 .link-container {
+    width:100px;
+    height:40px;
+    text-align: center;
+
+        &:hover {
+            border: $gold 1px solid;
+        }
+        .link {
+            font-family: "Roboto", sans-serif;
+            color:$white;
+            display: flex;
+            padding: 0 15px;
+
+            &:hover{
+            color: $gold;
+            }
+        }
+    }
