@@ -186,6 +186,7 @@ footer .paragraph, footer .link {
     padding:0;
     margin:0 0 33px 0;
     color:$grey;
+    text-transform: uppercase;
 }
 
 .header-4--secondary {
@@ -228,6 +229,7 @@ footer .paragraph, footer .link {
 
 .session-menu__link {
     color:black;
+    padding: 0 10px;
 }
 
 // ---------
@@ -379,7 +381,11 @@ footer .section05 .link-container {
 
 .chevron-container--black {
     background-color:$black;
-   
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    z-index: 30;
+
     .link--chevron {
         color:$white; 
             &:hover{
