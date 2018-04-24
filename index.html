@@ -93,32 +93,35 @@
 
         <!-- header content begins -->
         <div class="header-content">
-            <div class="header--left">
-                <h4 class="header-4--primary">26/02/2016</h4>
-                <p class="paragraph">Bring glamour to your wardrobe</p>
-                <h2 class="header-2--primary">Summer Collection 2016</h2>
+    
+            <div class="text-container">
+                <h4 class="header-4--primary date">26/02/2016</h4>
+                
+                <div class=header-2-container>
+                    <p class="paragraph">Bring glamour to your wardrobe</p>
+                    <h2 class="header-2--primary first">Summer</h2> 
+                    <h2 class="header-2--primary second">Collection 2016”</h2>
+                    <div class="link-container--round">
+                        <a href="#" class="link">View More</a>
+                    </div>
+                </div>
                 <h1 class="header-1--primary">01</h1>
-                <div class="link-container">
-                    <a href="#" class="link">View More</a>
-                </div>
-                <img src="images/header-bars.png" aria-hidden"true" class="header--left__image">
+        
             </div>
-    
-            <div class="header--right">
-                <div class="image">
-                    <img src="images/main-image-1.png" alt="Seven white dresses hung up on rack">
-                </div>
-                <div class="chevron-container chevron-container">
-                    <a href="#" class="left-chevron">
-                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                    </a>
-    
-                    <a href="#" class="right-chevron">
-                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                    </a>
-                </div>
+            <div class="image-container"></div>
+
+            <div class="chevron-container">
+                <a href="#" class="link--chevron left">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="link--chevron right">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
             </div>
+
+            <img src="images/header-bars.png" aria-hidden "true" class="image--bars">
         </div><!-- header content ends -->
+
     </header>
     <!-- HEADER ENDS -->
 
@@ -130,8 +133,12 @@
         <figure class="figure figure--1">
             <img src="images/image-1.png" alt="woman in white blazer" class="section-1__figure__image">
             <figcaption class="figcaption">
-                <h5 class="header-5--primary">Fashion</h5>
-                <h5 class="header-5--primary">& Accesories</h5>
+                <div class="header-5-container first">
+                    <h5 class="header-5--primary first">Fashion</h5>
+                </div>
+                <div class="header-5-container second">
+                    <h5 class="header-5--primary second">& Accesories</h5>
+                </div>
                 <p class="paragraph">Diverse Products</p>
             </figcaption>
         </figure>
@@ -139,8 +146,13 @@
         <figure class="figure figure--2">
             <img src="images/image-2.png" alt="woman in white long skirt, jean jacket and white heeled boots turned away from camera" class="image">
             <figcaption class="figcaption">
-                <h5 class="header-5--primary">New</h5>
-                <h5 class="header-5--primary">Collections</h5>
+                <div class="header-5-container first">
+                    <h5 class="header-5--primary first">New</h5>
+                </div> 
+                <div class="header-5-container second">
+                    <h5 class="header-5--primary second">Collections</h5>
+                </div>
+                
                 <p class="paragraph">Unique Products</p>
             </figcaption>
         </figure>
@@ -148,8 +160,12 @@
         <figure class="figure figure--3">
             <img src="images/image-3.png" alt="close up of man's midsection wearing white sweater on top of white button up and black jeans">
             <figcaption class="figcaption">
-                <h5 class="header-5--primary">Spring/Summer</h5>
-                <h5 class="header-5--primary">Lookbook</h5>
+            <div class="header-5-container first">
+                <h5 class="header-5--primary first">Spring/Summer</h5>
+            </div>
+            <div class="header-5-container second">
+                <h5 class="header-5--primary second">Lookbook</h5>
+            </div>
                 <p class="paragraph">Unique Novelties</p>
             </figcaption>
         </figure>
@@ -162,7 +178,7 @@
         <h3>Spring/Summer</h3>
         <div class="wrapper clearfix">
 
-            <h4 class="header-4--secondary">Top Products</h4>
+            <h4 class="header-4--primary">Top Products</h4>
             <p class="paragraph--subtitle">Come & Check our new Spring Summer Collection 2016</p>
             <div class="link-container--prev-next">
                 <a href="#" class="link">Prev</a>
@@ -171,65 +187,74 @@
             </div>
 
             <div class="figure-container">
-                    <a href="#" class="figure-container__link">
+                    <a href="#" class="figure__link">
                         <figure class="figure">
-                            <img src="images/top-product-1.png" alt="woman in white sweater" class="image">
-                            <figcaption class="figcaption">
-                                <p class="paragraph--bold-text">Lipsy Crochet Applique Wrap</p>
-                                <p class="paragraph--light-text">Blouse</p>
-                                <p class="paragraph--bold-number"> <span>$</span>120.00</p>
-                                <p class="paragraph--light-crossed">$150.00</p>
+                            <div class="image-container"><img src="images/top-product-1.png" alt="woman in white sweater" class="image">
                                 <div class="link-container">
                                     <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                                 </div>
+                            </div>
+                            
+                            <figcaption class="figcaption">
+                                <strong class="paragraph--bold">Lipsy Crochet Applique Wrap</strong>
+                                <p class="paragraph--light">Blouse</p>
+                                <strong class="paragraph--bold-price"> <span>$</span>120.00</strong>
+                                <p class="paragraph--light-crossed">$150.00</p>
+                                
                             </figcaption> 
                         </figure>
                     </a>
                 
-                    <a href="#" class="figure-container__link">
+                    <a href="#" class="figure__link">
                         <figure class="figure">
-                            <img src="images/top-product-2.png" alt="woman in white sweater" class="image">
-                            <figcaption class="figcaption">
-                                <p class="paragraph--bold-text">Sweatshirt in Grey Marl</p>
-                                <p class="paragraph--light-text">T-shirt</p>
-                                <p class="paragraph--bold-number">
-                                    <span>$</span>110.00
-                                </p>
+                            <div class="image-container">
+                                <img src="images/top-product-2.png" alt="woman in white jacket" class="image">
                                 <div class="link-container">
                                     <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                                 </div>
+                            </div>
+                            <figcaption class="figcaption">
+                                <strong class="paragraph--bold">Sweatshirt in Grey Marl</strong>
+                                <p class="paragraph--light">T-shirt</p>
+                                <strong class="paragraph--bold-price">
+                                    <span>$</span>110.00
+                                </strong>
                             </figcaption>
                         </figure>
                     </a>
     
-                    <a href="#" class="figure-container__link">
+                    <a href="#" class="figure__link">
                         <figure class="figure">
-                            <img src="images/top-product-3.png" alt="side profile of man in black floppy hat and black sweater" class="image">
-                            <figcaption class="figcaption">
-                                <p class="paragraph--bold-text">Embroidered Floppy</p>
-                                <p class="paragraph--light-text">Hat</p>
-                                <p class="paragraph--bold-number">
-                                    <span>$</span>1145.00
-                                </p>
+                            <div class="image-container">
+                                <img src="images/top-product-3.png" alt="side profile of man in black floppy hat and black sweater" class="image">
                                 <div class="link-container">
                                     <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                                 </div>
+                            </div>
+                            <figcaption class="figcaption">
+                                <strong class="paragraph--bold">Embroidered Floppy</strong>
+                                <p class="paragraph--light">Hat</p>
+                                <strong class="paragraph--bold-price">
+                                    <span>$</span>1145.00
+                                </strong>
                             </figcaption>
                         </figure>
                     </a>
               
-                    <a href="#" class="figure-container__link">
+                    <a href="#" class="figure__link">
                         <figure class="figure">
-                            <img src="images/top-product-1.png" alt="man in blue hat and grey sweater" class="image">
-                            <figcaption class="figcaption">
-                                <p class="paragraph--bold-text">Embroidered Skatwe</p>
-                                <p class="paragraph--light-text">T-shirt</p>
-                                <p class="paragraph--bold-number">
-                                    <span>$</span>120.00
-                                </p>
+                             <div class="image-container">
+                                <img src="images/top-product-3.png" alt="Man wearing blue hat and grey sweater" class="image">
                                 <div class="link-container">
                                     <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                                 </div>
+                            </div>
+                            <figcaption class="figcaption">
+                                <strong class="paragraph--bold">Embroidered Skatwe</strong>
+                                <p class="paragraph--light">T-shirt</p>
+                                <strong class="paragraph--bold-price">
+                                    <span>$</span>120.00
+                                </strong>
                             </figcaption>
                         </figure>
                     </a>
@@ -244,27 +269,23 @@
     <section class="section-3 section" id="look-book">
         <div class="wrapper">
 
-            <div class="container--left">
-                <img src="images/main-image-2.png" alt="rack of men's shirts" class="container--left__image">
-
-                <div class="container--left__image">
-                    <div class="chevron-container chevron-container--black">
-                        <a href="#" class="chevron-container__link--left-chevron">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                        <a href="#" class="link--right-chevron">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                   </div>
-                </div>
+            <div class="image-container"></div>
+                <!-- <img src="images/main-image-2.png" alt="rack of men's shirts" class="container--left__image"> -->
+            <div class="chevron-container chevron-container--black">
+                <a href="#" class="link--chevron left">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="link--chevron right">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
             </div>
 
-            <div class="container--right">
+            <div class="text-container">
                 <h4 class="header--4">Salvatore Gerragamo Lookbook</h4>
                 <h4 class="header--4">Spring/Summer 2018</h4>
-                <p class="paragraph">18 June 2016 / Salvator Campain</p>
-               <div class="link-container"> 
-                   <a href="#" class="link">Get the Look</a>
+                <p class="paragraph--subtitle">18 June 2016 / Salvator Campain</p>
+               <div class="link-container--round"> 
+                   <strong href="#" class="link">Get the Look!</strong>
                 </div>
                 <p class="paragraph--rotate">By Mark Jacobs</p>
             </div>
@@ -289,67 +310,76 @@
             <div class="figure-container">
                 <a href="#" class="figure__link">
                     <figure class="figure">
-                        <img src="images/onsale-products-1.png" alt="man in white t-shirt and blue jeans and black sneakers" class="image">
-                        <figcaption class="figcaption">
-                            <p class="paragraph--bold-text">Lipsy Crochet Applique Wrap</p>
-                            <p class="paragraph--light-text">Blouse</p>
-                            <p class="paragraph--bold-number">
-                                <span>$</span>120.00</p>
-                            <p class="paragraph--light-crossed">$150.00</p>
+                        <div class="image-container">
+                            <img src="images/onsale-products-1.png" alt="man in white t-shirt and blue jeans and black sneakers" class="image">
                             <div class="link-container">
                                 <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                             </div>
+                        </div>
+                        <figcaption class="figcaption">
+                            <strong class="paragraph--bold">Lipsy Crochet Applique Wrap</strong>
+                            <p class="paragraph--light">Blouse</p>
+                            <strong class="paragraph--bold-price">
+                                <span>$</span>120.00</strong>
+                            <p class="paragraph--light-crossed">$150.00</p>
+                            
                         </figcaption>
                     </figure>
                 </a>
            
                 <a href="#" class="figure__link">
                     <figure class="figure">
-                        <img src="images/onsale-products-2.png" alt="woman in jean jacket and black cap" class="image">
+                        <div class="image-container">
+                            <img src="images/onsale-products-2.png" alt="woman in jean jacket and black cap" class="image">
+                            <div class="link-container">
+                                <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
+                            </div>
+                        </div>
                         <figcaption class="figcaption">
-                            <p class="paragraph--bold-text">Sweatshirt in Grey Marl</p>
-                            <p class="paragraph--light-text">T-shirt</p>
-                            <p class="paragraph--bold-number">
+                            <strong class="paragraph--bold">Sweatshirt in Grey Marl</strong>
+                            <p class="paragraph--light">T-shirt</p>
+                            <strong class="paragraph--bold-price">
                                 <span>$</span>110.00
-                            </p>
+                            </strong>
                             <p class="paragraph--light-crossed">$150.00</p>
-                            <div class="link-container">
-                                <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
-                            </div>
                         </figcaption>
                     </figure>
                 </a>
            
                 <a href="#" class="figure__link">
                     <figure class="figure">
-                        <img src="images/onsale-products-3.png" alt="side profile of woman in sunglasses and bikini" class="image">
-                        <figcaption class="figcaption">
-                            <p class="paragraph--bold-text">Embroidered Floppy</p>
-                            <p class="paragraph--light-text">Hat</p>
-                            <p class="paragraph--bold-number">
-                                <span>$</span>1145.00
-                            </p>
-                            <p class="paragraph--light-crossed">$150.00</p>
+                        <div class="image-container">
+                            <img src="images/onsale-products-3.png" alt="side profile of woman in sunglasses and bikini" class="image">
                             <div class="link-container">
                                 <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                             </div>
+                        </div>
+                        <figcaption class="figcaption">
+                            <strong class="paragraph--bold">Embroidered Floppy</strong>
+                            <p class="paragraph--light">Hat</p>
+                            <strong class="paragraph--bold-price">
+                                <span>$</span>1145.00
+                            </strong>
+                            <p class="paragraph--light-crossed">$150.00</p>
                         </figcaption>
                     </figure>
                 </a>
         
                 <a href="#" class="figure__link">
                     <figure class="figure">
-                        <img src="images/onsale-products-4.png" alt="close-up of patterned pink scarf" class="image">
-                        <figcaption class="figcaption">
-                            <p class="paragraph--bold-text">Embroidered Skatwe</p>
-                            <p class="paragraph--light-text">T-shirt</p>
-                            <p class="paragraph--bold-number">
-                                <span>$</span>120.00
-                            </p>
-                            <p class="paragraph--light-crossed">$150.00</p>
+                        <div class="image-container">
+                            <img src="images/onsale-products-4.png" alt="close-up of patterned pink scarf" class="image">
                             <div class="link-container">
                                 <img src="images/shopping-bag.png" alt="shopping bag" class="image--bag">
                             </div>
+                        </div>
+                        <figcaption class="figcaption">
+                            <strong class="paragraph--bold">Embroidered Skate</strong>
+                            <p class="paragraph--light">T-shirt</p>
+                            <strong class="paragraph--bold-price">
+                                <span>$</span>120.00
+                            </strong>
+                            <p class="paragraph--light-crossed">$150.00</p>
                         </figcaption>
                     </figure>
                 </a>
@@ -365,33 +395,32 @@
         <div class="wrapper">
             <h4 class="header-4--primary">Our Blog</h4>
             
-            <div class="secition-5__topContainer">
-                <div class="section-5__text-container top">
+            <div class="top-container">
+                <div class="text-container top">
                     <p class="paragraph--uppercase-light">lookbook</p>
-                    <h4 class="header-4">Excerpt: A Sense of Belonging</h4>
-                    <p class="paragraph--capitalize-light paragraph">4 October 2016/ 368 Comments</p>
-                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis minus repellendus dignissimos.</p>
+                    <h4 class="header-4--secondary">Excerpt: A Sense of Belonging</h4>
+                    <p class="paragraph--capitalize-light paragraph">4 October 2016  /  368 Comments</p>
+                    <p class="paragraph--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis.</p>
                 </div>
-
-                <div class="section-5__image-container top"></div>
+                <!-- <div class="image-container top"></div> -->
             </div> <!-- top container ends -->
 
             
-            <div class="secition-5__bottomContainer">
+            <div class="bottom-container">
                 <div class="text-container bottom">
                     <p class="paragraph--uppercase-light">campaign</p>
-                    <h4 class="header-4">Chester and Peck 2016</h4>
-                    <p class="paragraph--capitalize-light paragraph">4 October 2016/ 368 Comments</p>
-                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis minus repellendus dignissimos.</p>
+                    <h4 class="header-4--secondary">Chester and Peck 2016</h4>
+                    <p class="paragraph--capitalize-light paragraph">4 October 2016  /  368 Comments</p>
+                    <p class="paragraph--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ullam ipsam nemo voluptates ea! Atque ipsa soluta, odio asperiores debitis delectus omnis minus repellendus dignissimos.</p>
                 </div>
 
-                <div class="section-5__image-container bottom"></div>
+                <!-- <div class="image-container bottom"></div> -->
 
-                <div class="section-5__chevron-container chevron-container">
-                    <a href="#" class="section-5__chevron-container--left-chevron left-chevron">
+                <div class="chevron-container">
+                    <a href="#" class="link--chevron left link">
                         <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a href="#" class="section-5__t__chevron-container--right-chevron right-chevron">
+                    <a href="#" class="link--chevron right link">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -406,19 +435,23 @@
     <!-- SECTION-6 BANNER BEGINS  -->
     <section class="section-6 section">
 
-        <div class="container--left">
-            <h4 class="header-4--secondary">Rethink Your Design</h4>
-            <p class="paragraph--subtitle">Minimal and Modern Look</p>
-            <div class="link-container">
-                <a href="#" class="link">Discover More</a>
+        <div class="container left">
+            <div class="text-container">
+                <h4 class="header-4--primary-white">Rethink Your Design</h4>
+                <p class="paragraph--subtitle">Minimal and Modern Look</p>
+                <div class="link-container--round">
+                    <a href="#" class="link">Discover More</a>
+                </div>
             </div>
         </div>
 
-        <div class="container--right">
-            <h4 class="header-4--secondary">Rethink Your Design</h4>
-            <p class="paragraph--subtitle">Minimal and Modern Look</p>
-            <div class="link-container">
-                <a href="#" class="link">Discover More</a>
+        <div class="container right">
+            <div class="text-container">
+                <h4 class="header-4--primary">Rethink Your Design</h4>
+                <p class="paragraph--subtitle">Minimal and Modern Look</p>
+                <div class="link-container--round">
+                    <a href="#" class="link">Discover More</a>
+                </div>
             </div>
         </div>
 
@@ -432,44 +465,56 @@
     <footer>
         <div class="wrapper">
             
-            <div class="footer__container">
-                <div class="footer__section01">
-                    <address class="address link">
-                        <h4 class="header-4">Contact</h4>
-                        <a href="https://www.google.ca/maps" class="link">123 Fake Street</a>
-                        <a href="tel" class="link">845-988-7165</a>
-                        <a href="tel" class="link">123-232-2323</a>
-                        <a href="mailto:fake@gmail.com" class="link"></a>
-                    </address>
+            <div class="footer-container">
+
+                <div class="container__section01">
+                        <h4 class="header-4--gold">Contact</h4>
+                        <a href="https://www.google.ca/maps" class="link">123 Fakeway Street, New York, America MRD4JX</a>
+                        <div class="container">
+                            <a href="tel" class="link">Phone:845-988-7165</a>
+                            <a href="tel" class="link">Fax:123-232-2323</a>
+                            <a href="mailto:fake@gmail.com" class="link">Email:fake@gmail.com</a>
+                        </div>
                 </div>
 
                 <div class="container__section02">
-                    <h4 class="header-4">Tags</h4>
-                    <div class="tags">
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-                        <a href="#" class="link"></a>
-
+                    <h4 class="header-4--gold">Tags</h4>
+                    <div class="tags-container">
+                        <ul>
+                            <li>
+                                <a href="#" class="link">creative</a></li>
+                            <li>
+                                <a href="#" class="link">blog</a></li>
+                            <li>
+                                <a href="#" class="link">maxshopthemes</a></li>
+                            <li>
+                                <a href="#" class="link">themeforest</a></li>
+                            <li>
+                                <a href="#" class="link">logo</a></li>
+                            <li>
+                                <a href="#" class="link">template</a></li>
+                            <li>
+                                <a href="#" class="link">pad</a></li>
+                            <li>
+                                <a href="#" class="link">wordpress</a></li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="footer__container__section03">
-                    <h4 class="header-4">Instagram</h4>
-                    <img src="insta-1" alt="">
-                    <img src="insta-2" alt="">
-                    <img src="insta-3" alt="">
-                    <img src="insta-4" alt="">
-                    <img src="insta-5" alt="">
-                    <img src="insta-6" alt="">
+                <div class="container__section03">
+                    <h4 class="header-4--gold">Instagram</h4>
+                    <a href="#" class="images-container">
+                        <img src="images/insta-1.png" alt="">
+                        <img src="images/insta-2.png" alt="">
+                        <img src="images/insta-3.png" alt="">
+                        <img src="images/insta-4.png" alt="">
+                        <img src="images/insta-5.png" alt="">
+                        <img src="images/insta-6.png" alt="">
+                    </a>
                 </div>
 
-                <div class="footer__container__section04">
-                    <h4 class="header-4">Newsletter</h4>
+                <div class="container__section04">
+                    <h4 class="header-4--gold">Newsletter</h4>
                     <p class="paragraph">Sign up for our Newsletter & Events</p>
                     <form action="">
                         <label for="email"></label>
@@ -479,25 +524,28 @@
                         <input type="submit" class="submit" value="Signup">
                     </form>
                 </div>
+
             </div>
 
             <div class="section05">
-                <h4 class="header-4">Follow Us On</h4>
+                <h4 class="header-4--gold">Follow Us On</h4>
 
-                <div class="link-container">
-                    <a href="https://www.facebook.com/" class="link">Facebook</a>
-                </div>
-                <div class="link-container">
-                    <a href="https://dribbble.com/" class="link">Dribbble</a>
-                </div>
-                <div class="link-container">
-                    <a href="https://www.pinterest.ca/" class="link">Pinterest</a>
-                </div>
-                <div class="link-container">
-                    <a href="https://www.behance.net/" class="link">Behance</a>
-                </div>
-                <div class="link-container">
-                    <a href="https://twitter.com/" class="link">Twitter</a>
+                <div class="media-container">
+                    <div class="link-container">
+                        <a href="https://www.facebook.com/" class="link">Facebook</a>
+                    </div>
+                    <div class="link-container">
+                        <a href="https://dribbble.com/" class="link">Dribbble</a>
+                    </div>
+                    <div class="link-container">
+                        <a href="https://www.pinterest.ca/" class="link">Pinterest</a>
+                    </div>
+                    <div class="link-container">
+                        <a href="https://www.behance.net/" class="link">Behance</a>
+                    </div>
+                    <div class="link-container">
+                        <a href="https://twitter.com/" class="link">Twitter</a>
+                    </div>
                 </div>
             </div>
 

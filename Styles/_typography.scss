@@ -1,11 +1,6 @@
 
 
-// colors
-$h1color: rgba(179,170,170,0.22);
-$black: #333333;
-$grey: #888888; 
-$white: #ffffff;
-$gold: #d4bd52;
+
 
 a {
     text-decoration:none;
@@ -27,6 +22,7 @@ p {
 h1 {
     color:$h1color;
     font-size:31.25rem;
+    font-weight: lighter;
 }
 
 h2 {
@@ -37,8 +33,8 @@ h2 {
 
 h3 {
     color:lighten($grey, 30);
-    font-size:3.75rem;
-    height:700px;
+    font-size:5.75rem;
+    height:100px;
     font-weight:700;
     transform:rotate(90deg);
 }
@@ -47,13 +43,27 @@ h4 {
     color:$black;
     font-size:1.88rem;
     font-weight:700;
+    margin: 0;
+    padding: 0;
 }
+
+.header-4--primary-white {
+    color:$white;
+}
+
+.header-4--gold {
+    color:$gold;
+    margin: 60px 0;
+}
+
 
 h5 {
     color:$black;
     font-size: 1.775rem;
     font-weight:700rem;
     background: $white;
+    display:inline-block;
+    padding: 0 10px;
 }
 
 // paragraph styles
@@ -64,16 +74,16 @@ p {
     font-weight:400;
 }
 
-header {
-    .paragraph {
+
+header .paragraph {
         font-size:1.75rem;
         color:$grey;
-    }
 }
 
 .paragraph--subtitle {
     color:$grey;
     font-size:1.13rem;
+    margin: 20px 0 0 0;
 }
 
 .navigation--responsive li {
@@ -89,8 +99,180 @@ header {
     }
 }
 
+.section-1 .paragraph {
+    transform: rotate(-90deg);
+    color: $black;
+}
+
+.section-1 .paragraph {
+    width:123px;
+    height:13px;
+}
+
+footer .paragraph, footer .link {
+    color: $white;
+    line-height: 2.5;
+    font-size: 1rem;
+
+
+    &:hover {
+        color:$gold;
+    }
+}
+
+// ------------
+// top product and onsale products figcaption text
+
+.paragraph--bold {
+    color:$black;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0;
+    margin:15px 0 0 0;
+}
+
+.paragraph--light {
+    color:$grey;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 5px 0 0 0;
+    margin:0;
+}
+
+.paragraph--bold-price { 
+    font-family: "Montserrat", sans-serif;
+    color:$black;
+    font-size: 1.125rem;
+    line-height: 1.667;
+    float:left;
+    padding: 0 10px 0 0;
+    margin: 10px 0 0 1px;
+
+    span {
+        padding-right:8px;
+    }
+}
+
+.paragraph--light-crossed {
+    font-family: "Montserrat", sans-serif;
+    color:#aaaaaa;
+    font-size: 1rem;
+    line-height: 1;
+    position:relative;
+    float:left;
+
+    &::before {
+        content: "";
+        background-color: $grey;
+        width:55px;
+        height:1px;
+        position:absolute;
+        left:0px;
+        top: 9px;
+    }
+}
+// ----------
+// section 3
+.section-3 .paragraph--rotate {
+    color:$black;
+    font-size: 0.94rem;
+    line-height: 2;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+}
+// ------------------------
+// section-5 text-container
+.paragraph--uppercase-light {
+    padding:0;
+    margin:0 0 33px 0;
+    color:$grey;
+}
+
+.header-4--secondary {
+    font-size:1.25rem;
+    margin: 0 0 10px 0;
+    padding:0;
+}
+
+.paragraph--capitalize-light {
+    color: $grey; 
+    font-size: 0.875rem;
+    line-height: 2.1;
+}
+.paragraph--description {
+    color: lighten($black, 20);
+    font-size: 1rem;
+    line-height: 1.821;
+}
+
+.text-container.top {
+    text-align:left;
+}
+
+.text-container.bottom {
+    p, h4 {
+        text-align:right;
+    }
+}
+
+// ---------------------------------------------------
+// link styles
+
+.main-navigation__list-item__link, .sub-menu__link, .language {
+    color:grey;
+}
+
+.main-navigation__list-item__link i{
+    font-size:12px;
+}
+
+.session-menu__link {
+    color:black;
+}
+
+// ---------
+// buttons
+.link-container--round {
+width:180px;
+height:60px;
+border-radius:50px;
+transition: box-shadow .3s ease-in;
+display: flex;
+justify-content: center;
+align-items:center;
+
+    &:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .link{
+    font-family: "Montserrat", sans-serif;
+    font-size:1rem;
+    padding:20px 45px;
+    }
+}
+
+.header-content .link-container--round {
+background-color:$gold;
+    .link {
+        color:$white;
+        transition: color .3s ease-in;
+    }
+}
+
+.section-3 .link-container--round {
+    border: solid 3px $gold;
+
+    .link{
+    padding:17px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:$black;
+    }
+}
+
 .link-container {
-    
     a, p {
     color: $grey;
     font-size: 1.15rem;
@@ -104,6 +286,7 @@ header {
 }
 
 .link-container--prev-next {
+     width:106px;
     a, p {
     color: $grey;
     font-size: 1.15rem;
@@ -119,140 +302,141 @@ header {
     }
 }
 
-.section-1 .paragraph {
-    transform: rotate(-90deg);
-    color: $black;
-}
 
-.section-1 .paragraph, footer .paragraph, footer .link {
-    font-size: 1rem;
-    line-height: 2.5;
-}
-footer .paragraph, footer .link {
-    color: $white;
-}
+// tags
+.section03 .link {
+padding:9px;
+border: 1px $white solid;
+transition: border ease-in-out .3s;
 
-footer .tags .link {
-    font-size: 0.88rem;
-    line-height: 2
-
-}
-
-.paragraph--bold-number { 
-    font-family: "Montserrat", sans-serif;
-    color:#333333;
-    font-size: 1.125rem;
-    line-height: 1.667;
-}
-.paragraph--light-crossed {
-    font-family: "Montserrat", sans-serif;
-    color:#aaaaaa;
-    font-size: 0.938rem;
-    line-height: 2;
-}
-
-.section-2, .section-4  {
-    .image--bag {
-    color: #ffffff;
-    font-size: 1rem;
-    line-height: 1.5;
+    &:hover {
+    border:1px solid gold;
     }
 }
-
-.section-3 .paragraph {
-    color:$grey;
-    font-size: 0.94rem;
-    line-height: 2;
-    transform: rotate(-90deg)
-}
-
-
-// 'top products>figcpation>p, 'onsale-products>figcaption>p, footer>p/a 
-//  #555555 #ffffff $white;
-// font-size: 1rem;
-// line-height: 1.5;
-
-
-
-// link styles
-
-.main-navigation__list-item__link, .sub-menu__link, .language {
-    color:grey;
-}
-
-.main-navigation__list-item__link i{
-    font-size:12px;
-}
-
-.session-menu__link {
-    color:black;
-}
-
-// buttons
-
-.link-container {
-width:180px;
-height:60px;
-border-radius:50px;
-    .link{
-    font-family: "Montserrat", sans-serif;
-    font-weight:400;
-    font-size:1rem;
-    padding:20px 45px;
-    }
-}
-
-.link-container--prev-next{
-    width:106px;
-}
-
-.header-content .link-container {
-background-color:$gold;
-    .link {
-        color:white;
-
-        &:hover {
-            color:black;
-        }
-    }
-}
-
-.section-3 .link-container {
-    border: solid 1px $gold;
-    background-color: $white;
-
-    .link{
-    padding:20px 45px;
-    }
-}
-
-.section-6 {
-    .container--left .link--button {
-        border: solid 1px $white;
-        color:$white;
-    }
-    .container--right .link--button {
-        border:solid 1px $gold;
-        color:$black;
-    }
-}
-
+// media links
 footer .section05 .link-container {
     width:100px;
     height:40px;
     text-align: center;
+    transition: border .3s ease-in-out;
 
         &:hover {
             border: $gold 1px solid;
+            border-radius:30px;
         }
         .link {
             font-family: "Roboto", sans-serif;
             color:$white;
             display: flex;
-            padding: 0 15px;
+            justify-content: center;
+            align-items:center;
+            font-size: 0.88rem;
 
             &:hover{
             color: $gold;
+            }
+        }
+}
+
+// --------------------
+// chevron container
+
+.chevron-container {
+    width:145px;
+    height:65px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.chevron-container {
+    background-color:$white;
+
+    .left::after {
+        content:"";
+        width: 1px;
+        background-color:lighten($grey, 40);
+        height:100%;
+        position: absolute;;
+        top:0;
+        right:-28px;
+        }
+    
+    .link--chevron {
+        color: $black;
+        position:relative;
+        // padding:14px;
+
+        &:hover {
+            color:$gold;
+        }
+
+        & svg {
+            font-size:2rem;
+        }
+    }
+}
+
+.chevron-container--black {
+    background-color:$black;
+   
+    .link--chevron {
+        color:$white; 
+            &:hover{
+            color:$gold;
+            }
+    }
+}
+
+
+.section-6 {
+
+    .link {
+        padding:18px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .container.left .link-container--round {
+        border: solid 3px rgba(255,255,255,.3);
+        color:$white;
+
+        .link {
+            color:$white;
+        }
+    }
+    .container.right .link-container--round {
+        border:solid 3px rgba(212, 189, 82,.3);
+        color:$black;
+        
+        .link {
+            color:$black;
+        }
+    }
+}
+
+// ---------------------------------
+// form styling
+    form {
+        .email {
+            border:2px $white solid;
+            background-color:none;
+            font-family:"Roboto", sans-serif;
+            color:$grey;
+
+            &:hover {
+                border:1px $gold solid;
+                background-color: darken($white, 20);
+                color:$black;
+            }
+        }
+        .submit {
+            border: 1px $gold solid;
+            background-color:$black;
+            color:$gold;
+            &:hover {
+            background-color: lighten($black, 20);
             }
         }
     }
