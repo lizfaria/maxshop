@@ -23,6 +23,10 @@ h1 {
     color:$h1color;
     font-size:31.25rem;
     font-weight: lighter;
+
+    @media(max-width:768px) {
+        display:none;
+    }
 }
 
 h2 {
@@ -47,7 +51,7 @@ h4 {
     padding: 0;
 }
 
-.header-4--primary-white {
+.header-4--primary--white {
     color:$white;
 }
 
@@ -64,6 +68,14 @@ h5 {
     background: $white;
     display:inline-block;
     padding: 0 10px;
+
+    @media(max-width:768px) {
+        font-size:1rem;
+    }
+
+    @media(max-width:768px) {
+        font-size:2rem;
+    }
 }
 
 // paragraph styles
@@ -91,6 +103,7 @@ header .paragraph {
     color: $black;
     font-size:2rem;
     text-decoration: none;
+    transition: color .3s ease-in-out;
     
 
         &:hover {
@@ -111,14 +124,25 @@ header .paragraph {
 
 footer .paragraph, footer .link {
     color: $white;
-    line-height: 2.5;
     font-size: 1rem;
-
+    line-height:2.5;
+    transition: all .3s ease-in-out;
 
     &:hover {
         color:$gold;
     }
+
 }
+
+footer {
+    .container__section01 .link {
+        line-height: 2; 
+    }
+}
+
+
+
+
 
 // ------------
 // top product and onsale products figcaption text
@@ -229,7 +253,7 @@ footer .paragraph, footer .link {
 
 .session-menu__link {
     color:black;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 // ---------
@@ -242,6 +266,7 @@ transition: box-shadow .3s ease-in;
 display: flex;
 justify-content: center;
 align-items:center;
+transition: box-shadow .3s ease-in-out;
 
     &:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -264,6 +289,8 @@ background-color:$gold;
 
 .section-3 .link-container--round {
     border: solid 3px $gold;
+    background-color:white;
+    text-align:right;
 
     .link{
     padding:17px;
@@ -306,7 +333,7 @@ background-color:$gold;
 
 
 // tags
-.section03 .link {
+.container__section02 .link {
 padding:9px;
 border: 1px $white solid;
 transition: border ease-in-out .3s;
@@ -326,18 +353,20 @@ footer .section05 .link-container {
             border: $gold 1px solid;
             border-radius:30px;
         }
-        .link {
-            font-family: "Roboto", sans-serif;
-            color:$white;
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            font-size: 0.88rem;
+}
 
-            &:hover{
-            color: $gold;
-            }
-        }
+.section05 .link, .copyright--responsive .link {
+    font-family: "Roboto", sans-serif;
+    color:$white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 0.88rem;
+    transition: color .3s ease-in-out;
+
+    &:hover{
+    color: $gold;
+    }
 }
 
 // --------------------
@@ -367,6 +396,7 @@ footer .section05 .link-container {
     .link--chevron {
         color: $black;
         position:relative;
+        transition: color .3s ease-in-out;
         // padding:14px;
 
         &:hover {
@@ -388,9 +418,17 @@ footer .section05 .link-container {
 
     .link--chevron {
         color:$white; 
+        transition:color .3s ease-in-out;
             &:hover{
             color:$gold;
             }
+    }
+}
+
+.bottom-container {
+    .chevron-container .link--chevron {
+        background-color:$white;
+        border:none;
     }
 }
 
@@ -405,19 +443,21 @@ footer .section05 .link-container {
     }
 
     .container.left .link-container--round {
-        border: solid 3px rgba(255,255,255,.3);
+        border: solid 2px rgba(255,255,255,.8);
         color:$white;
 
         .link {
             color:$white;
+            text-shadow: 1px 1px $black;
         }
     }
     .container.right .link-container--round {
-        border:solid 3px rgba(212, 189, 82,.3);
+        border:solid 2px rgba(212, 189, 82,.8);
         color:$black;
         
         .link {
             color:$black;
+            text-shadow: 1px 1px $white;
         }
     }
 }
@@ -430,6 +470,7 @@ footer .section05 .link-container {
             background-color:none;
             font-family:"Roboto", sans-serif;
             color:$grey;
+            transition: all .3s ease-in-out;
 
             &:hover {
                 border:1px $gold solid;
@@ -441,6 +482,7 @@ footer .section05 .link-container {
             border: 1px $gold solid;
             background-color:$black;
             color:$gold;
+            transition: lighten .3s ease-in-out;
             &:hover {
             background-color: lighten($black, 20);
             }

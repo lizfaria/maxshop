@@ -4,16 +4,20 @@ footer {
     background-color:$black;
     padding: 120px 0 0 0;
 
+    @media(max-width:940px) {
+        padding:0;
+    }
+
     .footer-container {
         display:flex;
-        flex-direction: row;
-        width: 100%;
+        flex-flow: row wrap;
+        justify-content:space-around;
+        }
     
 
     // section01
         .container__section01 {
-            width:25%;
-
+        flex-basis:260px;
             .container {
                 margin: 50px 0 0 0;
                 display:flex;
@@ -26,8 +30,7 @@ footer {
          }
     // section02
     .container__section02 {
-
-        width:25%;
+        flex-basis:300px;
         .tags-container {
             display:flex;
             flex-flow: row wrap;
@@ -43,15 +46,12 @@ footer {
                     display:inline-block;
                     margin: 10px 5px 5px 0;
                 }
-            }
-            
-            
+            }   
         }
-
     }
     // section03
         .container__section03 {
-            width:25%;
+          flex-basis:300px;
             .images-container {
                 display:flex;
                 flex-flow: row wrap;
@@ -63,8 +63,7 @@ footer {
         }
     // section04
         .container__section04 {
-            width: 25%;
-
+         flex-basis:300px;
             form {
 
                 .email {
@@ -80,7 +79,6 @@ footer {
                     margin: 0;
                  }
             }
-        }
 
      } // footer-container ends
 
@@ -115,3 +113,170 @@ footer {
 }
 
 // FOOTER ENDS
+
+// RESPONSIVE FOOTER BEGINS
+
+.footer--responsive {
+    display:none;
+}
+
+@media(max-width:748px) {
+
+    footer{
+    display: none;
+    }
+
+    .footer--responsive {
+        display:block;
+        background-color: lighten($black, 20);
+        padding: 50px 0;
+        max-width:748px;
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+            width:100%;
+    
+                input[type=checkbox]:checked ~ .header-4--responsive {
+                    color:$gold;
+                }
+    
+            .list-item {
+                .header-4--responsive{
+                color:$white;
+                padding: 10px 0;
+                text-align:center;
+                    svg {
+                        margin: 0 10px;
+                    }
+                }
+    
+                .span ul, .span--3 {
+                    color:white;
+                    display:flex;
+                    flex-flow:column wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .span ul {
+                    margin:20px;
+                }
+    
+                .link {
+                     color: $white;
+                     flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    transition: color .3s ease-in-out;
+    
+                    &:hover {
+                        color:$gold;
+                    }
+                 }
+                 .span--1 li {
+                     margin-bottom:10px;
+                     
+                 }
+                .span--2 li {
+                    margin:5px;
+                    
+
+                    .link {
+                    padding:0 0 10px 0;
+                    
+                    }
+                }
+    
+                .span--3 {
+                    .paragraph {
+                        padding:0;
+                    }
+                
+                    form {
+                    background-color: $grey;
+                        .submit {
+                            background-color: $grey;
+                            border: 4px solid $grey;
+                        }
+                    }
+                }
+            }
+        }
+        .icon-container {
+            ul {
+                padding: 0;
+                margin: 0;
+                display:flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                position:relative; 
+                width:300px;
+                margin: 0 auto 50px;
+                .link {
+                    list-style: none;
+                    padding:10px;
+                    svg {
+                        color:$white;
+                        font-size:1.5rem;
+                        transition: color .3s ease-in-out;
+                        &:hover {
+                            color:gold;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .copyright--responsive {
+            .paragraph, .menu-container .link {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                margin: 10px auto 0;
+                float:none;
+            }
+
+            .paragraph {
+
+              &::after {
+                    content: "";
+                    width:100%;
+                    height:2px;
+                    position:absolute;
+                    left:0;
+                    bottom: 0;
+                    background-color: $white;
+                }
+            }
+        }
+    
+    
+    /* we want the content to be hidden as default */
+    span {
+      display: none
+    }
+    
+    /* we do not want to show the checkbox at all */
+    #label--1, #label--2, #label--3,  {
+      display: none
+    }
+    
+    /* when the label is clicked, it checks the checkbox, and then we can target the span which contains the content */
+    #label--1:checked ~ .span--1 {
+      display: block;
+    }
+    
+    #label--2:checked ~ .span--2 {
+      display: block;
+    }
+    
+    // #label--3:checked ~ .span--3 {
+    //   display: block;
+    // }
+} // footer responsive ends
+} // media query ends
+
+
+// RESPONSIVE NAV ENDS
