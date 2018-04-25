@@ -1,7 +1,5 @@
 
 
-
-
 a {
     text-decoration:none;
 }
@@ -13,18 +11,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family:"Montserrat", sans-serif;
 }
 
-p {
-    font-family: "Roboto", sans-serif;
-    text-align: left;
-    font-weight:400;
-}
-
 h1 {
     color:$h1color;
     font-size:31.25rem;
     font-weight: lighter;
 
-    @media(max-width:768px) {
+    @media (max-width:768px) {
         display:none;
     }
 }
@@ -33,6 +25,10 @@ h2 {
     color:$black;
     font-size:5rem;
     font-weight:700;
+
+    @media (max-width:480px) {
+        font-size:3rem;
+    }
 }
 
 h3 {
@@ -69,16 +65,13 @@ h5 {
     display:inline-block;
     padding: 0 10px;
 
-    @media(max-width:768px) {
-        font-size:1rem;
-    }
-
-    @media(max-width:768px) {
-        font-size:2rem;
+    @media (max-width: 940px) {
+        font-size:1.5rem;
     }
 }
 
 // paragraph styles
+
 
 p {
     font-family: "roboto", sans-serif;
@@ -127,11 +120,9 @@ footer .paragraph, footer .link {
     font-size: 1rem;
     line-height:2.5;
     transition: all .3s ease-in-out;
-
     &:hover {
         color:$gold;
     }
-
 }
 
 footer {
@@ -140,12 +131,8 @@ footer {
     }
 }
 
-
-
-
-
 // ------------
-// top product and onsale products figcaption text
+// section-1 and section-2 figcaption text
 
 .paragraph--bold {
     color:$black;
@@ -206,7 +193,7 @@ footer {
 }
 // ------------------------
 // section-5 text-container
-.paragraph--uppercase-light {
+.paragraph--uppercase--light {
     padding:0;
     margin:0 0 33px 0;
     color:$grey;
@@ -219,7 +206,7 @@ footer {
     padding:0;
 }
 
-.paragraph--capitalize-light {
+.paragraph--capitalize--light {
     color: $grey; 
     font-size: 0.875rem;
     line-height: 2.1;
@@ -281,9 +268,14 @@ transition: box-shadow .3s ease-in-out;
 
 .header-content .link-container--round {
 background-color:$gold;
+margin:50px 0 0 0;
     .link {
         color:$white;
         transition: color .3s ease-in;
+    }
+
+    @media (max-width:768px) {
+        display:none;
     }
 }
 
@@ -311,7 +303,6 @@ background-color:$gold;
     a:hover {
     color: $black;
     }
-    
 }
 
 .link-container--prev-next {
@@ -431,7 +422,6 @@ footer .section05 .link-container {
         border:none;
     }
 }
-
 
 .section-6 {
 

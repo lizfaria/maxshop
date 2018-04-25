@@ -11,23 +11,22 @@ body {
     background-color:whitesmoke;
     overflow-x:hidden;
 }
-
- label[for="toggle"] {
-    position: fixed;
-    top: 15px;
-    right: 25px;
-    color:$black;
-    z-index:6;
-    font-size:3rem;
-        &:hover {
-            color:$gold;
-        }
-    }
-
-
 .wrapper {
     max-width: 1170px;
+    width:75%;
     margin:0 auto;
+
+    // @media (max-width: 940px) {
+    //     max-width:700px
+    // }
+
+    // @media (max-width: 768px) {
+    //     max-width:500px;
+    // }
+
+    @media (max-width: 480px) {
+        max-width:280px;
+    }
 }
 
 img {
@@ -69,11 +68,11 @@ img {
                     position:absolute;
                     left:-25%;
 
-                    @media(max-width:768px) {
+                    @media (max-width:768px) {
                         left:0
                     }
 
-                    @media(max-width:480px) {
+                    @media (max-width:480px) {
                         left:0
                     }
                 }
@@ -100,7 +99,7 @@ img {
                         top:75%;
                         left:-20%;  
                     }
-                    @media(max-width:768px) {
+                    @media (max-width:768px) {
                         display:none;
                     }
                 }
@@ -110,22 +109,6 @@ img {
 // SECTION 1 ENDS 
 
 // SECITON 2 AND SECTION 4
-h3 {
-    position:absolute;
-        @media (max-width:1000px) {
-            display: none;
-        }
-    }
-
-.section-2 h3 {
-    top:50%;
-    right:-10%;
-}
-
-.section-4 h3 {
-    top:42%;
-    left:-5%;
-}
 
 .section-2, .section-4 {
     position:relative;
@@ -152,21 +135,33 @@ h3 {
     .figure-container {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         clear: both;
 
-        .figure__link {
-            flex-basis: 270px;
+        @media (max-width:768px) {
+            flex-flow:column wrap;
+            align-items:center;
+        }
 
-            @media(max-width:940px) {
+        .figure__link {
+            width: 270px;
+            padding:10px;
+
+            @media (max-width:940px) {
                 flex-basis:300px;
+                padding:0;
+            }
+
+            @media (max-width:480px) {
+                flex-basis:400px;
+                padding:0;
             }
    
         .figure {
             position: relative;
             margin: 60px 0 0 0;
 
-            @media(max-width:480px) {
+            @media (max-width:480px) {
                 margin:0;
             }
 
@@ -175,10 +170,9 @@ h3 {
             }
 
            .image-container {
-            max-width: 270px;
-            max-height:370px;
+            width: 270px;
+            height: 370px;
             position:relative;
-            padding:0;
             margin:0;
             }
 
@@ -243,13 +237,6 @@ h3 {
         text-align:right;
         width: 890px;
 
-        @media(max-width:768px) {
-             flex-flow:column nowrap;
-            justify-content: center;
-            align-items:center;
-            width:400px;
-        }
-
         .paragraph--subtitle {
             text-align:right;
         }
@@ -268,35 +255,16 @@ h3 {
 // SECTION 3 ENDS
 
 // section 3 responsive begins
-.section-3--responsive  {
+
+section.section-3  {
+    @media (max-width:480px){
     display:none; 
-   
-
-    @media(max-width:768px) {
-        display:block;
-         position:relative;
-        background-image: url(../images/main-image-2.png);
-        background-size:contain;
-        background-position: right;
-        background-repeat:no-repeat;
-        height:400px;
-        width:100%;
-
-        .text-container {
-            display:flex;
-            flex-flow: column nowrap;
-            align-items:center;
-            justify-content:space-around;
-            position:absolute;
-            top: 0;
-            left:0;
-        }
     }
 }
+   
 // section 3 responsive ends
 
-
-// SECTION 4 ENDS 
+// see section 2 for section 4
 
 // SECTION 5 BEGINS 
 
@@ -314,7 +282,7 @@ h3 {
 
             .text-container, .image-container {
             width:50%;
-                @media(max-width:940px) {
+                @media (max-width:940px) {
                    width:100vw; 
                 }
             }
@@ -322,7 +290,7 @@ h3 {
             z-index:3;
             max-width:430px;
 
-            @media(max-width:940px) {
+            @media (max-width:940px) {
                    width:100vw; 
                 }
              }
@@ -335,7 +303,7 @@ h3 {
             background-repeat: no-repeat;
             position: absolute;
             width:700px;
-             @media(max-width:940px) {
+             @media (max-width:940px) {
                    width:100vw; 
                 }
             
@@ -343,11 +311,11 @@ h3 {
         }
     
         .text-container.top {
-            margin: 9% 0 8% 10%;
+            margin: 9% 0 0 10%;
         }
 
         .text-container.bottom {
-            margin: 50px 8% 130px 0; 
+            margin: 50px 0 130px 0; 
         }
 
         .top-container {
@@ -394,24 +362,32 @@ h3 {
         position:relative;
         
         .image-container {
-            width:785px;
             height:500px;
             background: url(../images/blog-1.png);
             background-size:cover;
             background-position:center;
             background-repeat: no-repeat;
-        }
+            max-width:950px;
+            margin: 0 auto;
+            }
+        
 
         .text-container {
             display:flex;
             flex-flow:column nowrap;
             justify-content: center;
-            align-items: center;
+            align-items: left;
             position: absolute;
             top:0;
+            left:10%;
             bottom:0;
             z-index:5;
             max-width: 400px;
+
+            @media (max-width:480px) {
+                max-width:350px;
+                left:2%;
+            }
 
             // .paragraph--uppercase--light, .paragraph--capitalize--light
             
@@ -419,11 +395,10 @@ h3 {
             h4 {
                 color:$white;
             }
-
             .paragraph {
-                text-align:center;
                 text-shadow: .5px .5px  white;
-                color: darken($grey, 40%)
+                color: darken($grey, 40%);
+                max-width:400px;
             }
         }
     }
@@ -446,7 +421,7 @@ h3 {
         justify-content: center;
         align-items: center;
 
-        @media(max-width: 940px) {
+        @media (max-width: 940px) {
             width:100%
         }
 
@@ -467,11 +442,12 @@ h3 {
 
         .text-container {
             text-align:left;
-         @media(max-width: 940px) {
-                display:flex;
-                flex-flow: column nowrap;
-                justify-content:center;
-                align-items:center;
+            @media (max-width: 940px) {
+                    display:flex;
+                    flex-flow: column nowrap;
+                    justify-content:center;
+                    align-items:center;
+                    flex-basis:100%;
 
         }
 
@@ -479,7 +455,7 @@ h3 {
                 padding:0;
                 margin:0;
 
-                @media(max-width: 940px) {
+                @media (max-width: 940px) {
                     text-align:center;
                 }
             }
@@ -487,6 +463,7 @@ h3 {
             .paragraph--subtitle {
                 padding: 0;
                 margin: 10px 0 30px 0;
+                float:none;
             }
 
             .link-container--round {

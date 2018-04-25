@@ -3,7 +3,6 @@
 
 header {
     max-width:100%;
-    
 
 // main-nav begins
     .top-header {
@@ -32,7 +31,7 @@ header {
         .main-navigation__list-item {
                 padding-left:20px;
                 position:relative;
-                transition: display .3s ease-in-out;
+                transition: all .3s ease-in-out;
             
                 &:hover::after {
                     position:absolute;
@@ -87,14 +86,10 @@ header {
              appearance:none;
         }
         
-
-        // #language[value="uk"] {
-        //     background-image: url(../images/UK-flag.png);
-        // }
     }
     // main nav ends
 
-        // head content begins
+    // header content begins
     
     .header-content {
         margin: 100px 0 0 0;
@@ -104,6 +99,14 @@ header {
         justify-content:flex-end;
         position:relative;
 
+        @media(max-width:940px) {
+            height:600px;
+        }
+
+        @media(max-width:768px) {
+            height:400px;
+        }
+
         .text-container {
         width:100%;
         position:absolute;
@@ -111,6 +114,9 @@ header {
         top: 0;
         z-index:100;
 
+         @media (max-width:940px) {
+        top: 5%;
+        }
             .header-4--primary.date {
                     margin: 0;
                     position:relative;
@@ -130,16 +136,24 @@ header {
                     padding:0;
                 }
             
-            .header-1--primary {
+            .header-1--container {
+                position:absolute;
+                .header-1--primary {
                 line-height:1;
                 position:absolute;
-                left: 3%;
-                top:75%;
+                left: 0;
+                top:0;
                 z-index:-1;
+
+                    @media (max-width:940px) {
+                        display:none;
+                    }
+                }   
             }
             .header-2--primary--second {
             margin: 0 0 2% 0;
             }
+
         }// text-container ends
 
         .image-container {
@@ -152,17 +166,20 @@ header {
         z-index:-5;
         right: 0;
 
-        @media(max-width:768px) {
-            width:100%;
-            
-        }
-
+            @media (max-width:1000px) {
+                width:100%;
+            }
         }
 
         .image--bars {
             position:absolute;
             left: 110px;
             bottom:20px;
+
+            @media (max-width:480px){
+                left:10%;
+                bottom:20px;
+            }
         }
 
         .chevron-container {
@@ -178,6 +195,18 @@ header {
     
 
     // responsive nav begins
+     label[for="toggle"] {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    color:$black;
+    z-index:6;
+    font-size:3rem;
+        &:hover {
+            color:$gold;
+        }
+    }
+    
    .navigation--responsive {
        display: none;
    }
@@ -241,6 +270,5 @@ header {
             top: 0vh;
         } 
     }
-
 
 // HEADER ENDS

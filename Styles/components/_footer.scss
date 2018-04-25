@@ -4,7 +4,7 @@ footer {
     background-color:$black;
     padding: 120px 0 0 0;
 
-    @media(max-width:940px) {
+    @media (max-width:940px) {
         padding:0;
     }
 
@@ -14,10 +14,12 @@ footer {
         justify-content:space-around;
         }
     
+    .container__section01, .container__section02, .container__section03, .container__section04 {
+        flex-basis:270px;
+    }
 
     // section01
         .container__section01 {
-        flex-basis:260px;
             .container {
                 margin: 50px 0 0 0;
                 display:flex;
@@ -28,9 +30,9 @@ footer {
                 }
             }
          }
+
     // section02
     .container__section02 {
-        flex-basis:300px;
         .tags-container {
             display:flex;
             flex-flow: row wrap;
@@ -49,21 +51,21 @@ footer {
             }   
         }
     }
+
     // section03
         .container__section03 {
-          flex-basis:300px;
             .images-container {
                 display:flex;
                 flex-flow: row wrap;
                 img {
-                    max-width:33.33%;
+                    max-width: calc(30% - 10px);
                     margin:5px;
                 }
             }
         }
+
     // section04
         .container__section04 {
-         flex-basis:300px;
             form {
 
                 .email {
@@ -80,7 +82,8 @@ footer {
                  }
             }
 
-     } // footer-container ends
+     } 
+// footer-container ends
 
     // section05
     .section05 {
@@ -104,10 +107,14 @@ footer {
         }
         .menu-container {
         float:right;
-        padding:12px 0;
-        width: 300px;
+        padding:18px 0;
+        max-width: 300px;
         display:flex;
         justify-content: space-between;
+
+            .link {
+                padding: 0 15px 0 0;
+            }
         }
     }
 }
@@ -115,12 +122,11 @@ footer {
 // FOOTER ENDS
 
 // RESPONSIVE FOOTER BEGINS
-
 .footer--responsive {
     display:none;
 }
 
-@media(max-width:748px) {
+@media (max-width:748px) {
 
     footer{
     display: none;
@@ -129,7 +135,7 @@ footer {
     .footer--responsive {
         display:block;
         background-color: lighten($black, 20);
-        padding: 50px 0;
+        padding: 50px 0 0;
         max-width:748px;
         ul {
             list-style: none;
@@ -202,6 +208,7 @@ footer {
                 }
             }
         }
+        
         .icon-container {
             ul {
                 padding: 0;
@@ -239,17 +246,10 @@ footer {
             }
 
             .paragraph {
-
-              &::after {
-                    content: "";
-                    width:100%;
-                    height:2px;
-                    position:absolute;
-                    left:0;
-                    bottom: 0;
-                    background-color: $white;
-                }
+                text-align:center;
+                font-size: .8rem;
             }
+            
         }
     
     
