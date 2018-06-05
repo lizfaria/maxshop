@@ -16,6 +16,10 @@ h1 {
     font-size:31.25rem;
     font-weight: lighter;
 
+    @media (max-width:1845px) {
+        font-size: 30rem;
+    }
+
     @media (max-width:768px) {
         display:none;
     }
@@ -25,9 +29,11 @@ h2 {
     color:$black;
     font-size:5rem;
     font-weight:700;
-
+    @media (max-width:768px) {
+        font-size:4.5rem;
+    }
     @media (max-width:480px) {
-        font-size:3rem;
+        font-size:4rem;
     }
 }
 
@@ -57,18 +63,42 @@ h4 {
 }
 
 
-h5 {
+.header-5--primary{
     color:$black;
     font-size: 1.775rem;
     font-weight:700rem;
     background: $white;
     display:inline-block;
     padding: 0 10px;
-
-    @media (max-width: 940px) {
+    @media (max-width: 1330px) and (min-width:480px) {
         font-size:1.5rem;
     }
+    @media (max-width: 940px) and (min-width:480px) {
+        font-size:1.5rem;
+    }
+    @media (min-width: 768px) and (max-width:480px) {
+        display:none;
+    }
 }
+
+.header-5--primary--responsive{
+    color:$black;
+    font-size: 1.775rem;
+    font-weight:700rem;
+    background: $black;
+    color:$white;
+    padding: 0 5px;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10%;
+    text-align:center;
+    height:100px;
+    @media(max-width:600px) {
+        display:flex;
+    }
+}
+
 
 // paragraph styles
 
@@ -246,23 +276,23 @@ footer {
 // ---------
 // buttons
 .link-container--round {
-width:180px;
-height:60px;
-border-radius:50px;
-transition: box-shadow .3s ease-in;
-display: flex;
-justify-content: center;
-align-items:center;
-transition: box-shadow .3s ease-in-out;
+    width:180px;
+    height:60px;
+    border-radius:50px;
+    transition: box-shadow .3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    transition: box-shadow .3s ease-in-out;
 
     &:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        // box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
 
     .link{
-    font-family: "Montserrat", sans-serif;
-    font-size:1rem;
-    padding:20px 45px;
+        font-family: "Montserrat", sans-serif;
+        font-size:1rem;
+        padding:20px 45px;
     }
 }
 
@@ -369,6 +399,7 @@ footer .section05 .link-container {
     display:flex;
     justify-content: space-around;
     align-items:center;
+    z-index:1000;
 }
 
 .chevron-container {
@@ -381,7 +412,7 @@ footer .section05 .link-container {
         height:100%;
         position: absolute;;
         top:0;
-        right:-28px;
+        right:-50%;
         }
     
     .link--chevron {
@@ -408,8 +439,11 @@ footer .section05 .link-container {
     z-index: 30;
 
     .link--chevron {
+        background-color:$black;
         color:$white; 
         transition:color .3s ease-in-out;
+        border:none;
+
             &:hover{
             color:$gold;
             }
@@ -435,16 +469,21 @@ footer .section05 .link-container {
     .container.left .link-container--round {
         border: solid 2px rgba(255,255,255,.8);
         color:$white;
-
+        transition:all .3s ease-in-out;
+        &:hover {
+            background-color: $grey;
+        }
         .link {
-            color:$white;
-            text-shadow: 1px 1px $black;
+            color:white;
         }
     }
     .container.right .link-container--round {
         border:solid 2px rgba(212, 189, 82,.8);
         color:$black;
-        
+        transition:all .3s ease-in-out;
+        &:hover {
+            background-color: $white;
+        }
         .link {
             color:$black;
             text-shadow: 1px 1px $white;

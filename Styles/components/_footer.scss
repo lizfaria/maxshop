@@ -245,6 +245,12 @@ footer {
                 float:none;
             }
 
+            .menu-container {
+                display: flex;
+                flex-flow: row nowrap;
+                margin:10% 0;
+            }
+
             .paragraph {
                 text-align:center;
                 font-size: .8rem;
